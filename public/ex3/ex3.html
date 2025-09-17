@@ -38,7 +38,7 @@
             // and display them in the select element
             // url: http://localhost:3010/categories
             try {
-                const response = await axios.get("https://organic-spork-69vwrwwjprjj35v57-3000.app.github.dev/categories");
+                const response = await axios.get("/categories");
                 showCategories(response.data);
             }catch (error) {
                 console.log(error);
@@ -72,7 +72,7 @@
                 showItems([]);
                 return;
             }
-            let url = "https://organic-spork-69vwrwwjprjj35v57-3000.app.github.dev/items";
+            let url = "/items";
             if (selectval !== "all") {
                 url += `?category=${selectval}`;
             }
